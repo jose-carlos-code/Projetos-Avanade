@@ -1,0 +1,115 @@
+:root{/*criação de variaveis*/
+    --vermelho:#E50914;
+    --preta: #141414;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*garante que o conteúdo não saia da caixa*/
+}
+
+@font-face {
+    font-family:'Terror' ;
+    src: url('../fontes-tipograficas/CFNightofTerrorPERSONAL-Reg.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:'TerrorTwo' ;
+    src: url('../fontes-tipograficas/Doctor Terror.otf')format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    background-color: var(--preta);
+    color:whitesmoke;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header .main{
+    display: flex;/*flex box*/
+    flex-direction: row;/*ja vem por padrão*/
+    align-items: center;/*alinha os itens do cabeçalho ao centro, de maneira vertical*/
+    justify-content: space-between;/*alinha os itens do cabeçalho ao centro, de maneira horizontal*/
+}
+
+h2.titulo-principal{
+    margin-left: 5px;
+    font-family:'Terror', sans-serif;
+    font-size:5em;
+    font-weight: normal;
+    color:var(--vermelho);
+}
+
+a{
+    margin-left: 8px;
+}
+
+nav a{
+    font-family: TerrorTwo;
+    color:rgb(157, 211, 157);
+    text-decoration: none;
+}
+
+nav a:hover{
+    color:darkblue;
+    background-color: rgb(185, 130, 28);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: .3s;
+}
+
+/*conteúdo principal*/
+
+.conteudo-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%),url('../images/background.jpg');
+    /*cria uma camada fina entre o texto e o background. é necessario passar 2 valores*/
+    height:400px;
+    background-size: cover;/*especificar o tamanho da imagem. cover pega a area de cobertura da caixa*/
+    display: flex;
+    flex-direction: column;/*alinha os elementos em coluna*/
+    justify-content: center;
+    align-items: flex-start;/*os elementos começam na esquerda*/
+}
+
+.conteudo-principal .descricao{
+    margin-bottom: 90px;/*dá uma margem entre os botões*/
+}
+
+
+.titulo{
+    font-family: 'Terror', Arial, Helvetica, sans-serif;
+    font-size: 40px;/*tamanho da fonte*/
+    color:darkseagreen;
+}
+.botao{
+    background-color: rgba(25, 221, 107, 0.5);
+    border:none;
+    color:darkred;
+    padding:15px 30px;
+    margin-right: 15px;
+    font-family:'Terror', Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+.botao:hover{
+    background-color:darkred;
+    color:rgba(25, 221, 107, 0.5);
+    transition: .3s ease all;
+}
+.container{
+    margin-left:20px;
+}
+.filme-principal .container{
+    width:70%;
+}
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+.carrosel-filmes{
+    margin-top:5px;
+}
